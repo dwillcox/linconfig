@@ -1,0 +1,2 @@
+# linconfig
+Linux configuration files
