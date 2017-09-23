@@ -1,0 +1,88 @@
+!!! Xterm section - Solarized Dark
+! Background Tones
+#define S_base03        #002b36
+#define S_base02        #073642
+
+! Content Tones
+! #define S_base01        #586e75
+! #define S_base00        #657b83
+! #define S_base0         #839496
+! #define S_base1         #93a1a1
+#define S_base01        #d787ff
+#define S_base00        #ffafaf
+#define S_base0         #afffaf
+#define S_base1         #afd7ff
+
+! Background Tones
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+xterm*background:            S_base03
+xterm*foreground:            S_base0
+xterm*fadeColor:             S_base03
+xterm*cursorColor:           S_base1
+xterm*pointerColorBackground:S_base01
+xterm*pointerColorForeground:S_base1
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+#define S_navwht        #ffd7af
+
+!! black dark/light
+xterm*color0:                S_base02
+xterm*color8:                S_base03
+
+!! red dark/light
+xterm*color1:                S_red
+xterm*color9:                S_orange
+
+!! green dark/light
+xterm*color2:                S_green
+xterm*color10:               S_base01
+
+!! yellow dark/light
+xterm*color3:                S_yellow
+xterm*color11:               S_base00
+
+!! blue dark/light
+xterm*color4:                S_blue
+xterm*color12:               S_base0
+
+!! magenta dark/light
+xterm*color5:                S_magenta
+xterm*color13:               S_navwht
+
+!! cyan dark/light
+xterm*color6:                S_cyan
+xterm*color14:               S_base1
+
+!! white dark/light
+xterm*color7:                S_base2
+xterm*color15:               S_base3
+
+! Font
+xterm*faceName: Letter Gothic
+xterm*faceSize: 11.5
+
+! Make every shell a login shell
+xterm*loginshell: true
+
+! Scrollback
+xterm*savelines: 16384
+
+! Geometry
+xterm*geometry: 80x50
+
+! stop terminal output from jumping to bottom of scroll
+xterm*scrollTtyOutput: false
+
+! double-click to select whole URLs
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+xterm*intensityStyles: false
