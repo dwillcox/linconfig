@@ -24,7 +24,7 @@ export PATH="/gpfs/home/dwillcox/job-run-scripts:$PATH"
 export PATH="/gpfs/home/dwillcox/anaconda3/bin:$PATH"
 
 # Modules to load on login
-module load shared torque anaconda/3 gcc openmpi
+module load shared maui torque anaconda/3 gcc openmpi
 
 # prompt -- this gets the git branch in the prompt
 # we also use some coloring.  Note that we need to put the 
