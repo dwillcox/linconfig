@@ -5,9 +5,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-## SO CUDA ONLY USES THE MAXWELL CARD on bender
-export CUDA_VISIBLE_DEVICES=0
-
 ## Remote LOGINS
 alias handy="ssh -X dwillcox@handy.iacs.stonybrook.edu"
 alias eldorado="ssh -X dwillcox@eldorado.astro.sunysb.edu"
@@ -24,6 +21,7 @@ alias sbumerger="ssh -X -o ServerAliveInterval=60 dwillcox@merger.astro.sunysb.e
 alias titan="ssh -X -o ServerAliveInterval=60 dwillcox@titan.ccs.ornl.gov"
 alias rhea="ssh -X -o ServerAliveInterval=60 dwillcox@rhea.ccs.ornl.gov"
 alias olcf="ssh -X -o ServerAliveInterval=60 dwillcox@home.ccs.ornl.gov"
+alias zilla="ssh -X -o ServerAliveInterval=60 dewillcox@zilla.lbl.gov"
 
 # Misc aliases
 alias xclip="xclip -selection c"
@@ -38,12 +36,15 @@ export SVN_EDITOR="emacs -nw"
 # Emacs editor daemon
 alias cem="emacsclient -nw"
 alias cemacs="emacsclient -nw"
-emacs --daemon >/dev/null 2>&1
 
 # Set terminal for screen
 export TERM="xterm"
 
 # Function definitions
+start_emacs_client() {
+        emacs --daemon >/dev/null 2>&1
+}
+
 fork() {
 	$1 >/dev/null 2>&1 &
 }

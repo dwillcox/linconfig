@@ -5,9 +5,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-## SO CUDA ONLY USES THE MAXWELL CARD on bender
-export CUDA_VISIBLE_DEVICES=0
-
 ## Remote LOGINS
 alias handy="ssh -X dwillcox@handy.iacs.stonybrook.edu"
 alias eldorado="ssh -X dwillcox@eldorado.astro.sunysb.edu"
@@ -30,7 +27,7 @@ alias n="nautilus ."
 alias wgetff="wget --user-agent=\"Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1\""
 
 # Emacs Editor Setup
-alias emacs="emacs -nw"
+alias ecs="emacs -nw"
 export EDITOR="emacs -nw"
 export SVN_EDITOR="emacs -nw"
 
