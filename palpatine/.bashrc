@@ -41,7 +41,7 @@ alias cemacs="emacsclient -nw"
 export TERM="xterm"
 
 # Function definitions
-start_emacs_client() {
+start_emacs_server() {
         emacs --daemon >/dev/null 2>&1
 }
 
@@ -62,47 +62,8 @@ pdfcat() {
 
 }
 
-# Add scripts to path
-export PATH="/home/dwillcox/scripts:$PATH"
-export PATH="/home/dwillcox/codes/job-run-scripts:$PATH"
-
-# Add Python code directories to PYTHONPATH
-export PYTHONPATH="/home/dwillcox/codes/mesautils:$PYTHONPATH"
-export PYTHONPATH="/home/dwillcox/codes/ND-Tile:$PYTHONPATH"
-export PYTHONPATH="/home/dwillcox/codes/pyreaclib:$PYTHONPATH"
-export PYTHONPATH="/home/dwillcox/codes/MAESTRO/Util/postprocessing/central_angle_average:$PYTHONPATH"
-
-# Declare HOMEs for AMReX, MAESTRO, CASTRO, Microphysics
-export AMREX_HOME="/home/dwillcox/codes/amrex"
-export MAESTRO_HOME="/home/dwillcox/codes/MAESTRO"
-export CASTRO_HOME="/home/dwillcox/codes/Castro"
-export MICROPHYSICS_HOME="/home/dwillcox/codes/Microphysics"
-
-# Declare location and init function for the MESA SDK
-export MESASDK_ROOT="/home/dwillcox/codes/mesasdk"
-export MESA_DIR="/home/dwillcox/codes/mesa"
-
-mesasdk() {
-    source $MESASDK_ROOT/bin/mesasdk_init.sh
-    export PS1='\e[1;32m(MESASDK)\e[m[\u@\[\e[1;34m\]\h\[\e[0m\] \W]\[\e[1;34m\]$(__git_ps1 "(%s)")\[\e[0m\]$ '
-}
-
-# Path for LAPACK
-export LAPACK_HOME="/home/dwillcox/local/lapack-3.7.0"
-
-# Add visit to path
-export PATH="/home/dwillcox/local/visit/bin:$PATH"
-
-# SVN UPDATE
-export SVN_EDITOR="emacs -nw"
-
-# pyjournal
-alias pj="pyjournal.py"
-alias ptd="pytodo.py"
-export PATH="/home/dwillcox/codes/pyjournal":$PATH
-
 # prompt -- this gets the git branch in the prompt
-# we also use some coloring.  Note that we need to put the 
+# we also use some coloring. Note that we need to put the 
 # coloring escape codes inside \[ \], otherwise, bash will include
 # them in the line length calculation and things will be messed up.
 # also deal with root
@@ -117,8 +78,3 @@ else
     export PS1='[\u@\[\e[1;34m\]\h\[\e[0m\] \W]\[\e[1;34m\]$(__git_ps1 "(%s)")\[\e[0m\]$ '
 fi
 
-# added by Anaconda3 4.2.0 installer
-export PATH="/home/dwillcox/anaconda3/bin:$PATH"
-
-# Rotate rightmost screen so it's in portrait mode
-#xrandr --output DVI-D-2 --rotate left
