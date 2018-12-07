@@ -1,5 +1,8 @@
 # Redefine escape key to Ctrl-o
 escape ^Oo
 
+# Use the ZSH shell
+shell "/usr/bin/zsh"
+
 # Start an emacs daemon
 emacs --daemon >/dev/null 2>&1
