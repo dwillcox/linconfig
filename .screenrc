@@ -1,6 +1,5 @@
 # Redefine escape key to Ctrl-o
 escape ^Oo
 
-# Use 256 colors
-# Doesn't work with emacs right...
-#term screen-256colors
+# Start an emacs daemon
+emacs --daemon >/dev/null 2>&1
