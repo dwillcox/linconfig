@@ -24,3 +24,5 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 (load-theme 'base16-chalk-dark)
+
+(add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))
