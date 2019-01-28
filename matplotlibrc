@@ -1,0 +1,4 @@
+backend : Agg
+text.usetex : True
+text.latex.preamble : \usepackage{amsmath}, \usepackage{amssymb}
+text.antialiased : True
