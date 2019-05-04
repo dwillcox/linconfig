@@ -27,3 +27,10 @@
 (setq-default c-basic-offset 4)
 
 (put 'downcase-region 'disabled nil)
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward)
+
+; wind move -- use shift + arrows to change windows
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
