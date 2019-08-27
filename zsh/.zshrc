@@ -61,6 +61,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     z
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,3 +94,5 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
